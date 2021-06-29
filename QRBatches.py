@@ -17,7 +17,7 @@ for row in ws.iter_rows(min_row=1, max_col=5, values_only=True):
     assetStart = youtubeLongLink.find("=")+1
     linkLength = len(youtubeLongLink)
     assetID = youtubeLongLink[assetStart:linkLength].strip()
-    youtubeShortLink = "https://youtu.be"+assetID
+    youtubeShortLink = "https://youtu.be/"+assetID
     qrFileName = "Trailer QR - "+movieName+" - "+assetID+".png"
 
     qrEncoding = pyqrcode.create(youtubeShortLink, error='L')
